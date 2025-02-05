@@ -18,13 +18,14 @@ $(function () {
     swup
 
     ***************************/
-   const options = {
+    const options = {
         containers: ['#swupMain', '#swupMenu'],
         animateHistoryBrowsing: true,
-        linkSelector: 'a:not([data-no-swup]):not([href^="tel:"])',  // Exclude tel: links here
+        linkSelector: 'a:not([data-no-swup])',
         animationSelector: '[class="mil-main-transition"]'
     };
     const swup = new Swup(options);
+
     /***************************
 
     register gsap plugins

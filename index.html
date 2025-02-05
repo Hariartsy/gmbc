@@ -15,9 +15,11 @@
     <link rel="stylesheet" href="css/plugins/fancybox.min.css" />
     <!-- GMBC scss -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/logo.css" />
     <!-- page name -->
     <title>GMBC</title>
-    <head>
+  <!-- icon link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <!-- FontAwesome -->
       <link
         rel="stylesheet"
@@ -25,7 +27,117 @@
         integrity="sha384-jLKHWM35f3ccY4KPYNcF42CfQldZk8xGh0LlA2K8eY3K3KjQnx9M4Q25W1+KlYBt"
         crossorigin="anonymous"
       />
-    </head>
+      <style>
+        .fa-arrow-right{
+          padding:0.6rem  0.7rem!important;
+          font-size: 1rem;
+        }
+        /* From Uiverse.io by G4b413l */ 
+        .three-body {
+         --uib-size: 35px;
+         --uib-speed: 0.8s;
+         --uib-color: rgb(255, 152, 0);
+         position: relative;
+         display: inline-block;
+         height: var(--uib-size);
+         width: var(--uib-size);
+         animation: spin78236 calc(var(--uib-speed) * 2.5) infinite linear;
+        }
+        
+        .three-body__dot {
+         position: absolute;
+         height: 100%;
+         width: 30%;
+        }
+        
+        .three-body__dot:after {
+         content: '';
+         position: absolute;
+         height: 0%;
+         width: 100%;
+         padding-bottom: 100%;
+         background-color: var(--uib-color);
+         border-radius: 50%;
+        }
+        
+        .three-body__dot:nth-child(1) {
+         bottom: 5%;
+         left: 0;
+         transform: rotate(60deg);
+         transform-origin: 50% 85%;
+        }
+        
+        .three-body__dot:nth-child(1)::after {
+         bottom: 0;
+         left: 0;
+         animation: wobble1 var(--uib-speed) infinite ease-in-out;
+         animation-delay: calc(var(--uib-speed) * -0.3);
+        }
+        
+        .three-body__dot:nth-child(2) {
+         bottom: 5%;
+         right: 0;
+         transform: rotate(-60deg);
+         transform-origin: 50% 85%;
+        }
+        
+        .three-body__dot:nth-child(2)::after {
+         bottom: 0;
+         left: 0;
+         animation: wobble1 var(--uib-speed) infinite
+            calc(var(--uib-speed) * -0.15) ease-in-out;
+        }
+        
+        .three-body__dot:nth-child(3) {
+         bottom: -5%;
+         left: 0;
+         transform: translateX(116.666%);
+        }
+        
+        .three-body__dot:nth-child(3)::after {
+         top: 0;
+         left: 0;
+         animation: wobble2 var(--uib-speed) infinite ease-in-out;
+        }
+        
+        @keyframes spin78236 {
+         0% {
+          transform: rotate(0deg);
+         }
+        
+         100% {
+          transform: rotate(360deg);
+         }
+        }
+        
+        @keyframes wobble1 {
+         0%,
+          100% {
+          transform: translateY(0%) scale(1);
+          opacity: 1;
+         }
+        
+         50% {
+          transform: translateY(-66%) scale(0.65);
+          opacity: 0.8;
+         }
+        }
+        
+        @keyframes wobble2 {
+         0%,
+          100% {
+          transform: translateY(0%) scale(1);
+          opacity: 1;
+         }
+        
+         50% {
+          transform: translateY(66%) scale(0.65);
+          opacity: 0.8;
+         }
+        }
+
+      </style>
+ 
   </head>
 
   <body>
@@ -49,9 +161,9 @@
       <div class="mil-preloader">
         <div class="mil-preloader-animation">
           <div class="mil-pos-abs mil-animation-1">
-            <p class="mil-h3 mil-muted mil-thin">Pioneering</p>
-            <p class="mil-h3 mil-muted">Creative</p>
-            <p class="mil-h3 mil-muted mil-thin">Excellence</p>
+            <p class="mil-h3 mil-muted mil-thin">Experts in </p>
+            <p class="mil-h3 mil-muted">Waterproofing</p>
+            <p class="mil-h3 mil-muted mil-thin">and flooring</p>
           </div>
           <div class="mil-pos-abs mil-animation-2">
             <div class="mil-reveal-frame">
@@ -73,7 +185,7 @@
       <div class="mil-menu-frame">
         <!-- frame clone -->
         <div class="mil-frame-top">
-          <a href="index.html" class="mil-logo">GMBC</a>
+           <img  src="img/SVG/GMBC-stacked-logo.svg" class="logo" /> 
           <div class="mil-menu-btn">
             <span></span>
           </div>
@@ -118,34 +230,10 @@
                       ></div>
                     </div>
                   </div>
-                  <!-- <div class="mil-menu-right">
+                  <div class="mil-menu-right">
                     <div class="row">
-                      <div class="col-lg-8 mil-mb-60">
-                         <h6 class="mil-muted mil-mb-30">Projects</h6> 
-
-                        <ul class="mil-menu-list">
-                        <li>
-                          <a href="project-1.html" class="mil-light-soft">Interior design studio</a>
-                        </li>
-                        <li>
-                          <a href="project-2.html" class="mil-light-soft">Home Security Camera</a>
-                        </li>
-                        <li>
-                          <a href="project-3.html" class="mil-light-soft">Kemia Honest Skincare</a>
-                        </li>
-                        <li>
-                          <a href="project-4.html" class="mil-light-soft">Cascade of Lava</a>
-                        </li> 
-                         <li>
-                          <a href="project-5.html" class="mil-light-soft">Air Pro by Molekule</a>
-                        </li>
-                        <li>
-                          <a href="project-6.html" class="mil-light-soft">Tony's Chocolonely</a>
-                        </li>
-                      </ul> 
-                      </div>
                       <div class="col-lg-4 mil-mb-60">
-                         <h6 class="mil-muted mil-mb-30">Useful links</h6>
+                        <h6 class="mil-muted mil-mb-30">Useful links</h6>
 
                         <ul class="mil-menu-list">
                           <li>
@@ -166,9 +254,9 @@
                           <li>
                             <a href="#." class="mil-light-soft">Careers</a>
                           </li>
-                        </ul> 
+                        </ul>
                       </div>
-                    </div> -->
+                    </div>
                     <div class="mil-divider mil-mb-60"></div>
                     <div class="row justify-content-between">
                       <div class="col-lg-4 mil-mb-60">
@@ -184,10 +272,18 @@
                         <h6 class="mil-muted mil-mb-30">Chennai</h6>
 
                         <p class="mil-light-soft">
-                          Bangalore & Hyderabad
-                          <span class="mil-no-wrap">+91 80730 28971</span>
+                          Thiruvalluvar puram 2nd street,Choolaimedu.
+                          <span class="mil-no-wrap">+91 78457 78328</span>
                         </p>
                       </div>
+                      <div class="col-lg-4 mil-mb-60">
+                                            <h6 class="mil-muted mil-mb-30">Bangalore & Hyderabad</h6>
+
+                                            <p class="mil-light-soft">
+                                            
+                                            <span class="mil-no-wrap">+91 78457 78328</span>
+                                            </p>
+                                        </div>
                     </div>
                   </div>
                 </div>
@@ -203,23 +299,40 @@
       <!-- curtain end -->
 
       <!-- frame -->
-      <div class="mil-frame">
-        <div class="mil-frame-top">
-          <a href="index.html" class="mil-logo"> GMBC </a>
-          <div class="mil-menu-btn">
-            <span></span>
-          </div>
-        </div>
-        <div class="mil-frame-bottom">
-          <div class="mil-current-page"></div>
-          <div class="mil-back-to-top">
-            <a href="#top" class="mil-link mil-dark mil-arrow-place">
-              <span>Back to top</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- frame end -->
+<div class="mil-frame">
+  <!-- <div class="mil-frame-top">
+    
+    <a href="index.html" class="mil-logo">
+      <img src="./GMBC-stacked-logo-blk.png" alt="GMBC Logo" class="logo"  />
+    </a>
+    <div class="mil-menu-btn">
+      <span></span>
+    </div>
+  </div> -->
+<!-- extra code -->
+  <div class="mil-frame-top">
+  <!-- Replace GMBC text with SVG logo -->
+    <a href="index.html" class="mil-logo">
+      <img src="./GMBC-stacked-logo-blk.png" alt="GMBC Logo" class="logo desktop-logo" />
+      <img src="./img/SVG/GMBC-stacked-logo.svg" alt="GMBC Logo" class="logo mobile-logo" />
+    </a>
+    <div class="mil-menu-btn">
+      <span></span>
+    </div>
+  </div>
+
+
+  <div class="mil-frame-bottom">
+    <div class="mil-current-page"></div>
+    <div class="mil-back-to-top">
+      <a href="#top" class="mil-link mil-dark fa-solid fa-arrow-right">
+        <span>Back to top</span>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- frame end -->
+
 
       <!-- content -->
       <div class="mil-content">
@@ -250,8 +363,8 @@
               <div class="container">
                 <div class="mil-banner-content mil-up">
                   <h1 class="mil-muted mil-mb-60">
-                    Designing <span class="mil-thin">a Better</span><br />
-                    Floor <span class="mil-thin">Today</span>
+                    Your <span class="mil-thin">Trusted </span><br />
+                    waterproofing <span class="mil-thin">Partner</span>
                   </h1>
                   <div class="row">
                     <div class="col-md-7 col-lg-5">
@@ -351,7 +464,7 @@
                       the test of time.
                     </p>
 
-                    <div class="mil-about-quote">
+                    <!-- <div class="mil-about-quote">
                       <div class="mil-avatar mil-up">
                         <img src="img/faces/customers/2.jpg" alt="Founder" />
                       </div>
@@ -360,7 +473,7 @@
                         <span class="mil-thin">Design Wonders:</span> Unleashing
                         <span class="mil-thin">Boundless Creativity</span>
                       </h6>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
                 <div class="col-lg-5">
@@ -371,7 +484,7 @@
                       style="padding-bottom: 160%"
                     >
                       <img
-                        src="img/low-angle-grayscale-shot-business-building.jpg"
+                        src="img/SVG/about-logo.png"
                         alt="img"
                         class="mil-scale"
                         data-value-1="1"
@@ -408,8 +521,8 @@
                     <div class="col-lg-10">
                       <span
                         class="mil-suptitle mil-light-soft mil-suptitle-right mil-up"
-                        >Professionals focused on helping your brand<br />
-                        grow and move forward.</span
+                        >Shielding your structures,.<br />
+                        securing your future.</span
                       >
                     </div>
                   </div>
@@ -417,16 +530,20 @@
                   <div
                     class="mil-complex-text justify-content-center mil-up mil-mb-15"
                   >
-                    <span class="mil-text-image"
-                      ><img src="img/GMBC Logo.png" alt="team"
-                    /></span>
-                    <h2 class="mil-h1 mil-muted mil-center">
-                      Unique <span class="mil-thin">Ideas</span>
+                    <!--<span class="mil-text-image"><img src="img/services/images(25).jpeg" alt="team"/>-->
+                    <!--</span>-->
+                    <div class="three-body">
+                        <div class="three-body__dot"></div>
+                        <div class="three-body__dot"></div>
+                        <div class="three-body__dot"></div>
+                    </div>
+                    <h2 class="mil-h1 mil-muted mil-center" style="padding-left:3%">
+                      Beyond  <span class="mil-thin"> waterproof.</span>
                     </h2>
                   </div>
                   <div class="mil-complex-text justify-content-center mil-up">
                     <h2 class="mil-h1 mil-muted mil-center">
-                      For Your <span class="mil-thin">Business.</span>
+                      Worry-proof.<span class="mil-thin"></span>
                     </h2>
                     <a
                       href="services.html"
@@ -507,7 +624,7 @@
           <!-- services end -->
 
           <!-- team -->
-          <section>
+          <!-- <section>
             <div class="container mil-p-120-30">
               <div class="row justify-content-between align-items-center">
                 <div class="col-lg-5 col-xl-4">
@@ -525,20 +642,12 @@
                       impactful work that exceeds expectations.
                     </p>
 
-                    <div class="mil-up">
-                      <a
-                        href="team.html"
-                        class="mil-button mil-arrow-place mil-mb-60"
-                        ><span>Read more</span></a
-                      >
-                    </div>
-
                     <h4 class="mil-up">
-                      <span class="mil-thin">We</span> delivering <br /><span
+                      <span class="mil-thin"> Your </span> reliable<br /><span
                         class="mil-thin"
-                        >exceptional</span
+                        >  partner in</span
                       >
-                      results.
+                      waterproofing.
                     </h4>
                   </div>
                 </div>
@@ -553,10 +662,10 @@
                           <div class="mil-description">
                             <div class="mil-secrc-text">
                               <h5 class="mil-muted mil-mb-5">
-                                <a href="home-2.html">Kiruthika P</a>
+                                <a href="home-2.html">Anna Oldman</a>
                               </h5>
                               <p class="mil-link mil-light-soft mil-mb-10">
-                                 Director
+                                Art Director
                               </p>
                               <ul class="mil-social-icons mil-center">
                                 <li>
@@ -600,7 +709,7 @@
                           </div>
                         </div>
 
-                        <!-- <div class="mil-team-card mil-up mil-mb-30">
+                        <div class="mil-team-card mil-up mil-mb-30">
                           <img src="img/faces/3.jpg" alt="Team member" />
                           <div class="mil-description">
                             <div class="mil-secrc-text">
@@ -650,7 +759,7 @@
                               </ul>
                             </div>
                           </div>
-                        </div> -->
+                        </div>
                       </div>
                       <div class="col-sm-6">
                         <p
@@ -666,10 +775,10 @@
                           <div class="mil-description">
                             <div class="mil-secrc-text">
                               <h5 class="mil-muted mil-mb-5">
-                                <a href="home-2.html">Karthikeyan G</a>
+                                <a href="home-2.html">Emma Newman</a>
                               </h5>
                               <p class="mil-link mil-light-soft mil-mb-10">
-                                Managing Director
+                                Founder
                               </p>
                               <ul class="mil-social-icons mil-center">
                                 <li>
@@ -713,7 +822,7 @@
                           </div>
                         </div>
 
-                        <!-- <div class="mil-team-card mil-up mil-mb-30">
+                        <div class="mil-team-card mil-up mil-mb-30">
                           <img src="img/faces/4.jpg" alt="Team member" />
                           <div class="mil-description">
                             <div class="mil-secrc-text">
@@ -762,7 +871,7 @@
                                 </li>
                               </ul>
                             </div>
-                          </div> -->
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -770,7 +879,7 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
           <!-- team end -->
 
           <!-- reviews -->
@@ -780,15 +889,15 @@
                 <div class="col-lg-10">
                   <span
                     class="mil-suptitle mil-suptitle-right mil-suptitle-dark mil-up"
-                    >Customer reviews are a valuable source <br />of information
-                    for both businesses and consumers.</span
+                    >Your Trusted  Waterproofing<br /> 
+                    partners.</span
                   >
                 </div>
               </div>
 
               <h2 class="mil-center mil-up mil-mb-60">
-                Customer <span class="mil-thin">Voices:</span> <br />Hear What
-                <span class="mil-thin">They Say!</span>
+                Experts in <span class="mil-thin">Waterproofing</span> <br /> and flooring
+                <span class="mil-thin"></span>
               </h2>
 
               <div class="mil-revi-pagination mil-up mil-mb-60"></div>
@@ -823,17 +932,16 @@
                           data-swiper-parallax="-200"
                           data-swiper-parallax-opacity="0"
                         >
-                          <h5 class="mil-up mil-mb-10">Mr. Sanglimani</h5>
+                          <h5 class="mil-up mil-mb-10">
+                            Mr. Sanglimani, Project Manager
+                            </h5>
                           <p class="mil-mb-5 mil-upper mil-up mil-mb-30">
                             Licious
+
                           </p>
                           <p class="mil-text-xl mil-up">
-                            This creative agency stands out with their
-                            exceptional talent and expertise. Their ability to
-                            think outside the box and bring unique ideas to life
-                            is truly impressive. With meticulous attention to
-                            detail, they consistently deliver visually stunning
-                            and impactful work.
+                            GM Building Chemicals provided a comprehensive waterproofing solution for our new processing facility. Their team was professional, efficient, and minimized disruption to our operations. We've had no issues with leaks or dampness since the application, even during heavy monsoon seasons. We're very satisfied with their work and would recommend them to other food processing businesses.
+
                           </p>
                         </div>
                       </div>
@@ -843,17 +951,13 @@
                           data-swiper-parallax="-200"
                           data-swiper-parallax-opacity="0"
                         >
-                          <h5 class="mil-up mil-mb-10">Mr. Karthikeyan </h5>
+                          <h5 class="mil-up mil-mb-10"> Mr. Karthikeyan, md
+                            </h5>
                           <p class="mil-mb-5 mil-upper mil-up mil-mb-30">
                             Krk Construction 
                           </p>
                           <p class="mil-text-xl mil-up">
-                            I had the pleasure of working with this creative
-                            agency, and I must say, they truly impressed me.
-                            They consistently think outside the box, resulting
-                            in impressive and impactful work. I highly recommend
-                            this agency for their consistent delivery of
-                            exceptional creative solutions.
+                            As a construction company, we need reliable partners. GM Building Chemicals consistently delivers high-quality waterproofing systems for our industrial projects. Their products are durable and their application team is skilled. They also offer excellent technical support, which is invaluable during complex projects. We consider them a trusted partner.
                           </p>
                         </div>
                       </div>
@@ -863,17 +967,14 @@
                           data-swiper-parallax="-200"
                           data-swiper-parallax-opacity="0"
                         >
-                          <h5 class="mil-up mil-mb-10">Mr. Vijay</h5>
+                          <h5 class="mil-up mil-mb-10"> Mr. Vijay, Commercial
+                            </h5>
                           <p class="mil-mb-5 mil-upper mil-up mil-mb-30">
                             Giant Engineering
+
                           </p>
                           <p class="mil-text-xl mil-up">
-                            This creative agency stands out with their
-                            exceptional talent and expertise. Their ability to
-                            think outside the box and bring unique ideas to life
-                            is truly impressive. With meticulous attention to
-                            detail, they consistently deliver visually stunning
-                            and impactful work.
+                            We had a persistent leaking roof in our main factory building, which was causing damage to equipment and disrupting production. GM Building Chemicals assessed the problem thoroughly and proposed a tailored solution. The work was completed on time and within budget, and the leaks are now completely resolved. We're impressed with their expertise and problem-solving approach.
                           </p>
                         </div>
                       </div>
@@ -883,17 +984,14 @@
                           data-swiper-parallax="-200"
                           data-swiper-parallax-opacity="0"
                         >
-                          <h5 class="mil-up mil-mb-10">Mr. Velmurugan</h5>
+                          <h5 class="mil-up mil-mb-10"> Mr. Velmurugan, Project manager
+                            </h5>
                           <p class="mil-mb-5 mil-upper mil-up mil-mb-30">
-                            Shintec
+                            Shintec 
+
                           </p>
                           <p class="mil-text-xl mil-up">
-                            I had the pleasure of working with this creative
-                            agency, and I must say, they truly impressed me.
-                            They consistently think outside the box, resulting
-                            in impressive and impactful work. I highly recommend
-                            this agency for their consistent delivery of
-                            exceptional creative solutions.
+                            GM Building Chemicals provided waterproofing for our chemical storage facility, which required specialized materials and application techniques. They demonstrated a strong understanding of our needs and provided a solution that met all safety and performance requirements. We're confident in the quality of their work and their commitment to safety.
                           </p>
                         </div>
                       </div>
@@ -903,17 +1001,13 @@
                           data-swiper-parallax="-200"
                           data-swiper-parallax-opacity="0"
                         >
-                          <h5 class="mil-up mil-mb-10">Mr. Reshma singh</h5>
+                          <h5 class="mil-up mil-mb-10"> Ms. Reshma singh, MD
+                            </h5>
                           <p class="mil-mb-5 mil-upper mil-up mil-mb-30">
-                            Shinwoo Engineering
+                            Shinwoo Engineering 
                           </p>
                           <p class="mil-text-xl mil-up">
-                            This creative agency stands out with their
-                            exceptional talent and expertise. Their ability to
-                            think outside the box and bring unique ideas to life
-                            is truly impressive. With meticulous attention to
-                            detail, they consistently deliver visually stunning
-                            and impactful work.
+                            We chose GM Building Chemicals for waterproofing our new manufacturing plant based on their reputation and competitive pricing. The entire process, from initial consultation to final inspection, was smooth and efficient. Their team was responsive to our questions and concerns, and they completed the work to a high standard. We're happy with the result.
                           </p>
                         </div>
                       </div>
@@ -923,40 +1017,17 @@
                           data-swiper-parallax="-200"
                           data-swiper-parallax-opacity="0"
                         >
-                          <h5 class="mil-up mil-mb-10">Mr. Magesh</h5>
+                          <h5 class="mil-up mil-mb-10"> Mr. Magesh, Manger
+                            </h5>
                           <p class="mil-mb-5 mil-upper mil-up mil-mb-30">
                             Chennai public school
                           </p>
                           <p class="mil-text-xl mil-up">
-                            I had the pleasure of working with this creative
-                            agency, and I must say, they truly impressed me.
-                            They consistently think outside the box, resulting
-                            in impressive and impactful work. I highly recommend
-                            this agency for their consistent delivery of
-                            exceptional creative solutions.
+                            GM Building Chemicals provided a reliable waterproofing solution for our school, protecting our building from water damage for years to come. We highly recommend their services.
                           </p>
                         </div>
                       </div>
-                      <!-- <div class="swiper-slide">
-                        <div
-                          class="mil-review-frame mil-center"
-                          data-swiper-parallax="-200"
-                          data-swiper-parallax-opacity="0"
-                        >
-                          <h5 class="mil-up mil-mb-10">Sarah Newman</h5>
-                          <p class="mil-mb-5 mil-upper mil-up mil-mb-30">
-                            Envato market
-                          </p>
-                          <p class="mil-text-xl mil-up">
-                            This creative agency stands out with their
-                            exceptional talent and expertise. Their ability to
-                            think outside the box and bring unique ideas to life
-                            is truly impressive. With meticulous attention to
-                            detail, they consistently deliver visually stunning
-                            and impactful work.
-                          </p>
-                        </div>
-                      </div> -->
+                      
                     </div>
                   </div>
                 </div>
@@ -966,34 +1037,34 @@
           <!-- reviews end -->
 
           <!-- partners -->
-          <div class="mil-soft-bg">
-            <div class="container mil-p-0-120">
-              <div class="swiper-container mil-infinite-show mil-up">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <a href="#." class="mil-partner-frame" style="width: 60px"
-                      ><img src="img/partners/1.svg" alt="logo"
-                    /></a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#." class="mil-partner-frame" style="width: 100px"
-                      ><img src="img/partners/2.svg" alt="logo"
-                    /></a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#." class="mil-partner-frame" style="width: 60px"
-                      ><img src="img/partners/1.svg" alt="logo"
-                    /></a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#." class="mil-partner-frame" style="width: 100px"
-                      ><img src="img/partners/2.svg" alt="logo"
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!--<div class="mil-soft-bg">-->
+          <!--  <div class="container mil-p-0-120">-->
+          <!--    <div class="swiper-container mil-infinite-show mil-up">-->
+          <!--      <div class="swiper-wrapper">-->
+          <!--        <div class="swiper-slide">-->
+          <!--          <a href="#." class="mil-partner-frame" style="width: 60px"-->
+          <!--            ><img src="img/partners/1.svg" alt="logo"-->
+          <!--          /></a>-->
+          <!--        </div>-->
+          <!--        <div class="swiper-slide">-->
+          <!--          <a href="#." class="mil-partner-frame" style="width: 100px"-->
+          <!--            ><img src="img/partners/2.svg" alt="logo"-->
+          <!--          /></a>-->
+          <!--        </div>-->
+          <!--        <div class="swiper-slide">-->
+          <!--          <a href="#." class="mil-partner-frame" style="width: 60px"-->
+          <!--            ><img src="img/partners/1.svg" alt="logo"-->
+          <!--          /></a>-->
+          <!--        </div>-->
+          <!--        <div class="swiper-slide">-->
+          <!--          <a href="#." class="mil-partner-frame" style="width: 100px"-->
+          <!--            ><img src="img/partners/2.svg" alt="logo"-->
+          <!--          /></a>-->
+          <!--        </div>-->
+          <!--      </div>-->
+          <!--    </div>-->
+          <!--  </div>-->
+          <!--</div>-->
           <!-- partners end -->
 
           <!-- footer -->
@@ -1004,7 +1075,7 @@
                   <div class="col-md-4 col-lg-4 mil-mb-60">
                     <div class="mil-muted mil-logo mil-up mil-mb-30">GMBC</div>
 
-                    <!-- <p class="mil-light-soft mil-up mil-mb-30">
+                    <p class="mil-light-soft mil-up mil-mb-30">
                       Subscribe to our newsletter:
                     </p>
 
@@ -1012,9 +1083,9 @@
                       <input type="text" placeholder="Enter your email" />
                       <button
                         type="submit"
-                        class="mil-button mil-icon-button-sm mil-arrow-place"
+                        class="mil-button mil-icon-button-sm fa-solid fa-arrow-right"
                       ></button>
-                    </form> -->
+                    </form>
                   </div>
                   <div class="col-md-7 col-lg-6">
                     <div class="row justify-content-end">
@@ -1054,62 +1125,71 @@
                         <h6 class="mil-muted mil-up mil-mb-30">Coimbatore</h6>
 
                         <p class="mil-light-soft mil-up">
-                          <i class="fas fa-map-marker-alt"></i> 163, Pattel (St),
-Veeriyampalayam,
-Kalapatti (Po),
-Coimbatore- 641048
+                          <i class="fas fa-map-marker-alt"></i> 67 E2 Nehru
+                          Nagar West, Near to Nila Garden, Kalapatti, PO
                           <br />
                           <i class="fas fa-phone-alt"></i>
-                          <a href="tel:+917845778328">+91 7845778328</a>
+                          <a href="tel:+917845778328">+91 78457 78328</a>
                         </p>
                       </div>
                       <div class="col-md-6 col-lg-5 mil-mb-60">
                         <h6 class="mil-muted mil-up mil-mb-30">Chennai</h6>
 
                         <p class="mil-light-soft mil-up">
-                          <i class="fas fa-map-marker-alt"></i> Bangalore &
-                          Hyderabad
+                          <i class="fas fa-map-marker-alt"></i> Thiruvalluvar puram 2nd street,
+Choolaimedu.
+
                           <br />
                           <i class="fas fa-phone-alt"></i>
-                          <a href="tel:+918073028971">+91 8073028971</a>
+                          <a href="tel:+917845778328">+91 78457 78328</a>
+                        </p>
+                      </div>
+                      <div class="col-md-6 col-lg-5 mil-mb-60">
+                        <h6 class="mil-muted mil-up mil-mb-30">Bangalore & Hyderabad</h6>
+
+                        <p class="mil-light-soft mil-up">
+                          
+                          <i class="fas fa-phone-alt"></i>
+                          <a href="tel:+917845778328">+91 78457 78328</a>
                         </p>
                       </div>
                     </div>
                   </div>
-                 <div class="col-md-4 col-lg-6 mil-mb-60">
-  <div class="mil-vert-between">
-    <div class="mil-mb-30">
-      <ul class="mil-social-icons mil-up">
-        <li>
-          <a href="https://www.facebook.com" target="_blank" class="social-icon">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.twitter.com" target="_blank" class="social-icon">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com" target="_blank" class="social-icon">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com" target="_blank" class="social-icon">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <p class="mil-light-soft mil-up">
-      © Copyright 2024 - GMBC. All Rights Reserved.
-    </p>
-  </div>
-</div>
-</div>
-</div>
-</footer>
+                  <div class="col-md-4 col-lg-6 mil-mb-60">
+                    <div class="mil-vert-between">
+                      <div class="mil-mb-30">
+                        <ul class="mil-social-icons mil-up">
+                          <li>
+                            <a href="#." target="_blank" class="social-icon">
+                              <i class="far fa-circle"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#." target="_blank" class="social-icon">
+                              <i class="far fa-circle"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#." target="_blank" class="social-icon">
+                              <i class="far fa-circle"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#." target="_blank" class="social-icon">
+                              <i class="far fa-circle"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <p class="mil-light-soft mil-up">
+                        © Copyright 2024 - GMBC. All Rights Reserved.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
           <!-- footer end -->
 
           <!-- hidden elements -->

@@ -1,0 +1,55 @@
+.logo {
+  height: auto;
+  opacity: 1;
+}
+
+  .logo {
+    display: block;
+  }
+
+  @media (max-width: 1008px) {
+    .logo {
+      display: none;
+    }
+  }
+
+
+
+
+
+/* For screens wider than 1200px (large desktops) */
+@media (min-width: 1200px) {
+  .logo {
+    width: 80px!important; /* Further increase the logo size */
+  }
+}
+/* For screens narrower than 768px (mobile devices) */
+@media (max-width: 768px) {
+  .logo {
+    width: 60px!important; /* Smaller size for mobile */
+  }
+}
+/* For screens narrower than 480px (small phones) */
+@media (max-width: 480px) {
+  .logo {
+    width: 30px!important; /* Smaller size for very small screens */
+  }
+}
+
+/* Default behavior: hide the mobile logo and show the desktop logo */
+.mobile-logo {
+  display: none;
+}
+.desktop-logo {
+  display: block;
+}
+
+/* Show the mobile logo and hide the desktop logo on mobile and tablet */
+@media (max-width: 1008px) {
+  .mobile-logo {
+    display: block;
+  }
+  .desktop-logo {
+    display: none;
+  }
+}
